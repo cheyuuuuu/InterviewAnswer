@@ -5,42 +5,42 @@ function Form() {
   const { register, handleSubmit } = useForm();
   const { onSubmit, category } = useSearch();
   return (
-    <div className="formBox">
+    <div className="form-box">
       <form onSubmit={handleSubmit(onSubmit)}>
         <label className="name">名 稱 </label>
         <input
           type="text"
           {...register("name")}
           placeholder="請輸入名稱"
-          className="formInput"
+          className="form-input"
         />
         <br />
-        <label className="formLabel">選擇類別</label>
+        <label className="form-label">選擇類別</label>
         {category.map((item) => (
           <div key={item} style={{ display: "inline-block" }}>
             <input type="checkbox" value={item} {...register("category")} />
-            <label key={`label-${item}`} className="categoryLabel">
+            <label key={`label-${item}`} className="category-label">
               {item}
             </label>
           </div>
         ))}
         <br />
-        <label className="formLabel">價格範圍</label>
+        <label className="form-label">價格範圍</label>
         <input
           type="number"
           {...register("minPrice")}
           placeholder="最低價格"
-          className="formInput"
+          className="form-input"
         />
         <span> ~ </span>
         <input
           type="number"
           {...register("maxPrice")}
           placeholder="最高價格"
-          className="formInput"
+          className="form-input"
         />
         <br />
-        <label className="formLabel">存貨狀態</label>
+        <label className="form-label">存貨狀態</label>
         <select type="inStock" {...register("inStock")}>
           <option value="" hidden>
             請選擇存貨狀態
@@ -50,7 +50,7 @@ function Form() {
           <option value="false">無存貨</option>
         </select>
         <br />
-        <div className="formButton">
+        <div className="form-button">
           <button type="submit">搜尋</button>
         </div>
       </form>

@@ -6,17 +6,17 @@ function SerchResult() {
     const item = result[index];
     return (
       <div className="table-row-box" style={style}>
-        <div className="tableRow">
-          <div className="tableItem" data-label="商品名稱">
+        <div className="table-row">
+          <div className="table-item" data-label="商品名稱">
             {item.name}
           </div>
-          <div className="tableItem" data-label="類別">
+          <div className="table-item" data-label="類別">
             {item.category}
           </div>
-          <div className="tableItem" data-label="價格">
+          <div className="table-item" data-label="價格">
             {item.price}
           </div>
-          <div className="tableItem" data-label="庫存">
+          <div className="table-item" data-label="庫存">
             {item.inStock ? "有" : "沒有"}
           </div>
         </div>
@@ -25,7 +25,7 @@ function SerchResult() {
   };
   return (
     <div>
-      <div className="tableBox">
+      <div className="table-box">
         <table>
           <thead>
             <tr>
@@ -37,7 +37,7 @@ function SerchResult() {
           </thead>
         </table>
       </div>
-      <div className="tableBodyBox">
+      <div className="table-body-box">
         <List
           height={400}
           itemCount={result.length} // 告訴 react-window 總共有多少項

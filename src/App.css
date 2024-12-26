@@ -20,7 +20,7 @@ body{
   height:100vh;
   display:block;
 }
-.formBox {
+.form-box {
   margin: 3rem;
   display: flex;
   justify-content: center;
@@ -28,30 +28,30 @@ body{
 .name{
   margin-right: 5.4rem;
 }
-.categoryLabel{
+.category-label{
   margin-right: 1rem;
   margin-left: 1rem;
 }
-.formLabel {
+.form-label {
   margin-right: 3rem;
 }
-.sortBox{
+.sort-box{
   display:flex;
   justify-content: center;
   margin:3rem;
 }
 
-.tableBox {
+.table-box {
   width: 80%;
   margin: 0 auto;
   
 }
-.tableBodyBox {
+.table-body-box {
   width: 80%;
   margin: 0 auto;
 }
 
-.tableRow {
+.table-row {
   display: flex;
   align-items: center;
   border-bottom: 1px solid #ddd;
@@ -71,12 +71,12 @@ th {
   border-bottom: 2px solid #ddd;
   flex: 1;
 }
-.tableItem{
+.table-item{
   display: flex;
   justify-content: center;
   width: 100%;
 }
-.formButton {
+.form-button {
   margin-top: 1rem;
   display: flex;
   justify-content: center;
@@ -84,17 +84,17 @@ th {
 button{
   margin-left: 1rem;
 }
-.formInput{
+.form-input{
   width: 10rem
 }
 
 @media (max-width:768px) {
-  .tableBox,.tableBodyBox{
+  .table-box,.table-body-box{
     display: none;
   }
 }
 @media (min-width:768px) {
-  .demoBox{
+  .demo-box{
     display: none !important;
     
   }

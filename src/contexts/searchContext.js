@@ -6,12 +6,15 @@ export function SearchProvider({ children }) {
   const [result, setResult] = useState([]);
   const [category, setCategory] = useState([]);
 
+  //第一次渲染取得所有類別
   useEffect(() => {
     const newCategory = getCategory();
     setCategory(newCategory.sort());
   }, []);
 
+  //表單提交邏輯
   const onSubmit = (data) => {
+    //檢查是否提交空表單 是的話回傳所有資料
     const isEmpty = checkEmpty(data);
 
     if (isEmpty) {
@@ -51,17 +54,17 @@ export function SearchProvider({ children }) {
 
     setResult(filteredItems);
   };
+  //判斷是否提交空值fun
   function checkEmpty(data) {
     let isEmpty = true;
     for (let item in data) {
       if (data[item] !== "") {
-        console.log("進入判斷");
         isEmpty = false;
       }
     }
     return isEmpty;
   }
-
+  //獲得所有種類fun
   function getCategory() {
     const tempCategory = [];
     for (let i = 0; i < itemsData.length; i++) {
@@ -78,18 +81,15 @@ export function SearchProvider({ children }) {
     }
     return tempCategory;
   }
-
+  //處理升序
   function upSort() {
-    console.log("進入升序");
     const sortedResult = [...result].sort((a, b) => a.price - b.price);
     setResult(sortedResult);
-    console.log("升序完成");
   }
+  //處理降序
   function downSort() {
-    console.log("進入降序");
     const sortedResult = [...result].sort((a, b) => b.price - a.price);
     setResult(sortedResult);
-    console.log("降序完成");
   }
 
   return (

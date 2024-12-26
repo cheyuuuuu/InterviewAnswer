@@ -1,4 +1,4 @@
-import React, { forwardRef } from "react";
+import React from "react";
 import { useSearch } from "../contexts/searchContext";
 import { FixedSizeGrid as Grid } from "react-window";
 
@@ -8,11 +8,11 @@ const GUTTER_SIZE = 5;
 const COLUMN_WIDTH = 145;
 const ROW_HEIGHT = 100;
 
-function Demo() {
+function SearchResultMobile() {
   const { result } = useSearch();
 
   if (!result || result.length === 0) {
-    return <div className="demoBox">沒有搜尋結果</div>;
+    return <div className="demo-box">沒有搜尋結果</div>;
   }
   const rowCount = Math.ceil(result.length / 2);
   const Cell = ({ columnIndex, rowIndex, style }) => {
@@ -32,18 +32,18 @@ function Demo() {
           height: style.height - GUTTER_SIZE,
         }}
       >
-        <div className="cardBox">
+        <div className="card-box">
           <div className="card">
-            <div className="tableItem2" data-label="商品名稱">
+            <div className="table-item2" data-label="商品名稱">
               {item.name}
             </div>
-            <div className="tableItem2" data-label="類別">
+            <div className="table-item2" data-label="類別">
               {item.category}
             </div>
-            <div className="tableItem2" data-label="價格">
+            <div className="table-item2" data-label="價格">
               {item.price}
             </div>
-            <div className="tableItem2" data-label="庫存">
+            <div className="table-item2" data-label="庫存">
               {item.inStock ? "有" : "沒有"}
             </div>
           </div>
@@ -53,7 +53,7 @@ function Demo() {
   };
 
   return (
-    <div className="demoBox">
+    <div className="demo-box">
       <Grid
         className="Grid"
         columnCount={2}
@@ -69,4 +69,4 @@ function Demo() {
   );
 }
 
-export default Demo;
+export default SearchResultMobile;

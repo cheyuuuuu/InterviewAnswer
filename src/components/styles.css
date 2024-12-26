@@ -18,19 +18,19 @@
     background-color: #f8f2f0;
     
   }
-  .demoBox{
+  .demo-box{
     display: flex;
     justify-content: center;
     
   }
-.tableItem2::before{
+.table-item2::before{
     content: attr(data-label);
     width: 80px;
     margin-right: 10px;
     text-align: left;
     justify-content: start;
 }
-.tableItem2 {
+.table-item2 {
     justify-content: flex-start;
     padding-left: 2px;
     
@@ -42,7 +42,7 @@
     flex-direction: column;
     padding-top: 60%;
     justify-content: center; /* 垂直置中 */}
-.cardBox {
+.card-box {
     display: flex;
     justify-content: center;
     align-items: center;

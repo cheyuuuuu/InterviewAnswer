@@ -1,0 +1,49 @@
+.Grid {
+   
+    border: 1px solid #d9dddd;
+    width:80vw !important;
+    height: 70vh !important;
+    display: flex;
+    justify-content: center;
+    margin: 0 auto !important;
+  }
+  
+  .GridItem {
+    position: static !important;
+    display: inline-block;
+    text-align: center;
+    
+    padding-top: 10px;
+    margin: 1px;
+    background-color: #f8f2f0;
+    
+  }
+  .demoBox{
+    display: flex;
+    justify-content: center;
+    
+  }
+.tableItem2::before{
+    content: attr(data-label);
+    width: 80px;
+    margin-right: 10px;
+    text-align: left;
+    justify-content: start;
+}
+.tableItem2 {
+    justify-content: flex-start;
+    padding-left: 2px;
+    
+}
+.card {
+    
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    padding-top: 60%;
+    justify-content: center; /* 垂直置中 */}
+.cardBox {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

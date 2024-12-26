@@ -88,3 +88,14 @@ button{
   width: 10rem
 }
 
+@media (max-width:768px) {
+  .tableBox,.tableBodyBox{
+    display: none;
+  }
+}
+@media (min-width:768px) {
+  .demoBox{
+    display: none !important;
+    
+  }
+}
